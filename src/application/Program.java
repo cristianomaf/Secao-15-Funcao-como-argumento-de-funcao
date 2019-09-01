@@ -19,8 +19,8 @@ public class Program {
 		lista.add(new Produto("HD Case", 80.90));
 		
 		ServicoProduto ps = new ServicoProduto();
-		
-		double soma = ps.filteredSum(lista);
+		//Agora passando tambem i criterio para soma dos valores
+		double soma = ps.filteredSum(lista,p->p.getNome().charAt(0)=='T');
 		
 		System.out.println("Soma = "+String.format("%.2f", soma));
 		
